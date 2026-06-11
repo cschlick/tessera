@@ -1,0 +1,11 @@
+name: tessera_dart
+description: Dart port of tessera — blinded Shamir secret-sharing vault (libsodium).
+version: 0.1.0
+publish_to: none
+environment:
+  sdk: ^3.0.0
+dependencies:
+  sodium: ^3.0.0
+  unorm_dart: ^0.3.2
+dev_dependencies:
+  test: ^1.25.0

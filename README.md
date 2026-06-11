@@ -57,9 +57,9 @@ unlock:
            (exactly M hashes, cached — never re-hashed afterwards)
            y_i ← (c_i − r_i′) mod P        (correct answer ⇒ true share)
   Phase 2: for each of the C(M, t) subsets of t points:
-           interpolate S′ at x = 0, derive KEK′, attempt GCM decryption
-  The GCM tag is the only correctness oracle. First success returns the MEK;
-  exhaustion returns None.
+           interpolate S′ at x = 0, derive KEK′, attempt AEAD decryption
+  The Poly1305 tag is the only correctness oracle. First success returns the
+  MEK; exhaustion returns None.
 ```
 
 Correct answers yield true Shamir shares; wrong answers yield uniformly

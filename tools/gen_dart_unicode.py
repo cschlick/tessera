@@ -56,13 +56,16 @@ def main() -> int:
     lines.append("")
 
     here = os.path.dirname(os.path.abspath(__file__))
-    out = os.path.abspath(
-        os.path.join(here, "..", "ports", "dart_spike", "lib", "unicode_tables.dart")
-    )
-    with open(out, "w", encoding="utf-8") as fh:
-        fh.write("\n".join(lines))
-    print(f"wrote {out}: {len(casefold)} casefold entries, "
-          f"{len(whitespace)} whitespace code points")
+    # The package copy is canonical; the spike keeps its own committed copy.
+    targets = [
+        os.path.join(here, "..", "ports", "dart", "lib", "src", "unicode_tables.dart"),
+        os.path.join(here, "..", "ports", "dart_spike", "lib", "unicode_tables.dart"),
+    ]
+    for out in map(os.path.abspath, targets):
+        with open(out, "w", encoding="utf-8") as fh:
+            fh.write("\n".join(lines))
+        print(f"wrote {out}: {len(casefold)} casefold entries, "
+              f"{len(whitespace)} whitespace code points")
     return 0
 
 
