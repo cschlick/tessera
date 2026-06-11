@@ -19,14 +19,14 @@ State:
     FieldEntry    — per-field public data
 
 Errors:
-    ThresholdVaultError  — base exception
+    TesseraError  — base exception
     InvalidParamsError   — bad parameters
     FieldError           — finite field arithmetic error
     SerializationError   — state serialization failure
 """
 
 from .container import open_container, seal
-from .errors import ContainerError, FieldError, InvalidParamsError, SerializationError, ThresholdVaultError
+from .errors import ContainerError, FieldError, InvalidParamsError, SerializationError, TesseraError
 from .params import Argon2Params, Params
 from .processor import ExactStringProcessor, FieldProcessor, RawBytesProcessor, SecureSketchProcessor
 from .state import FieldEntry, PublicState
@@ -45,7 +45,7 @@ __all__ = [
     "Params",
     "FieldEntry",
     "PublicState",
-    "ThresholdVaultError",
+    "TesseraError",
     "InvalidParamsError",
     "FieldError",
     "SerializationError",

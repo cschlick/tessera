@@ -220,7 +220,7 @@ symlink escapes.
 
 ### Errors
 
-`ThresholdVaultError` (base) → `InvalidParamsError`, `FieldError`,
+`TesseraError` (base) → `InvalidParamsError`, `FieldError`,
 `SerializationError`, `ContainerError`. Note that `unlock` never raises to
 signal a wrong answer — it returns `None`.
 
