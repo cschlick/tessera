@@ -1,0 +1,4 @@
+# Runtime dependencies for tessera. Install with: pip install -r requirements.txt
+# PyNaCl bundles libsodium, providing Argon2id, BLAKE2b, XChaCha20-Poly1305,
+# and the secretstream chunked AEAD used by the container.
+pynacl>=1.5

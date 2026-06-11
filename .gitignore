@@ -1,0 +1,18 @@
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Dart
+.dart_tool/
+pubspec.lock
+
+# local artifacts
+vault.json
+*.tsra
+mek*.b64
+
+# local tooling
+.claude/

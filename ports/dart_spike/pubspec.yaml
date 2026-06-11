@@ -1,0 +1,11 @@
+name: tessera_dart_spike
+description: FFI Argon2id parity spike against the tessera KAT vectors.
+publish_to: none
+environment:
+  sdk: ^3.0.0
+dependencies:
+  # Pure-Dart Unicode NFC for ExactStringProcessor normalization. Everything
+  # else uses only dart:ffi/dart:io/dart:convert, with native buffers via
+  # libsodium's own sodium_malloc. Casefold/whitespace tables are GENERATED
+  # from CPython (lib/unicode_tables.dart) for parity by construction.
+  unorm_dart: ^0.3.2

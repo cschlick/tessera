@@ -1,0 +1,333 @@
+{
+  "_about": "Known-answer vectors generated from the tessera Python reference.",
+  "container_constants": {
+    "magic": "TSRA",
+    "version": 2,
+    "chunk_bytes": 65536
+  },
+  "argon2id": [
+    {
+      "password_hex": "636f727265637420686f727365",
+      "salt_hex": "00112233445566778899aabbccddeeff",
+      "opslimit": 1,
+      "memlimit": 8192,
+      "hash_len": 64,
+      "alg": "argon2id-v1.3",
+      "output_hex": "82f97a2ba227ff2501ab9f2cc894841a58ed53fe523ffe0552035255cd2ac759b88b1d0d4afbb3ab1eeacd8f0e44ee4edcac4e43f95653717e707acda56629d9"
+    },
+    {
+      "password_hex": "636f727265637420686f727365",
+      "salt_hex": "00112233445566778899aabbccddeeff",
+      "opslimit": 2,
+      "memlimit": 8388608,
+      "hash_len": 64,
+      "alg": "argon2id-v1.3",
+      "output_hex": "2401873726a7fa6553cce4ee5fad81dd48bc3d251fb342d880e40bdc21a6913b58ab0aae2a1f8a8e8a11f1df9f104c46a321fbdf52690ab674d1c1f4fcbfce92"
+    },
+    {
+      "password_hex": "70c3a4737377c3b67264",
+      "salt_hex": "ffffffffffffffffffffffffffffffff",
+      "opslimit": 3,
+      "memlimit": 16777216,
+      "hash_len": 64,
+      "alg": "argon2id-v1.3",
+      "output_hex": "bf205c4aff020aca6148c1526983645c21af0cbe3696628e75eff0bd627a1f39450333f19f761c05b1691b7a0bdfbb095ee132840995b7f423729b9b6869f391"
+    }
+  ],
+  "reduce_mod_p": [
+    {
+      "input_hex": "00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+      "output_decimal": "0"
+    },
+    {
+      "input_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f202122232425262728292a2b2c2d2e2f303132333435363738393a3b3c3d3e3f",
+      "output_decimal": "14869111036241295375422033445944544876198452471481717950472446389328329603874"
+    },
+    {
+      "input_hex": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+      "output_decimal": "35720"
+    }
+  ],
+  "blake2b_kdf": [
+    {
+      "construction": "BLAKE2b-256(domain || salt || secret)",
+      "domain_hex": "746573736572612f6b656b2f7631",
+      "salt_hex": "0102030405060708090a0b0c0d0e0f10",
+      "secret_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "key_hex": "ca8b22435652c573c1579a22242cb3f6357ca44f576310369fb83339f67e158c"
+    },
+    {
+      "construction": "BLAKE2b-256(domain || salt || secret)",
+      "domain_hex": "746573736572612f636f6e7461696e65722f7631",
+      "salt_hex": "aabbccddeeff00112233445566778899",
+      "secret_hex": "73686f72742d6d656b",
+      "key_hex": "bcd638b67864f837c6232404ccebf994fa410d17cf10d40aeeac0a25534abb3c"
+    }
+  ],
+  "xchacha20poly1305": [
+    {
+      "key_hex": "000102030405060708090a0b0c0d0e0f101112131415161718191a1b1c1d1e1f",
+      "nonce_hex": "000102030405060708090a0b0c0d0e0f1011121314151617",
+      "plaintext_hex": "74657373657261207863686163686132302d706f6c7931333035207465737420766563746f72",
+      "aad_hex": "6173736f6369617465642d64617461",
+      "ciphertext_hex": "eaa77c0cf5a0ec8e4b274eafa83ac9da7b6a58ca91af2cd84f2f1fc258de81792863d5902e15",
+      "tag_hex": "4f960c6ad0f607db46c59739f238663f"
+    }
+  ],
+  "field": {
+    "P_decimal": "115792089237316195423570985008687907853269984665640564039457584007913129639747",
+    "poly_eval": {
+      "coeffs_decimal": [
+        "123456789",
+        "987654321",
+        "555"
+      ],
+      "points": [
+        {
+          "x": 1,
+          "result_decimal": "1111111665"
+        },
+        {
+          "x": 2,
+          "result_decimal": "2098767651"
+        },
+        {
+          "x": 3,
+          "result_decimal": "3086424747"
+        },
+        {
+          "x": 7,
+          "result_decimal": "7037064231"
+        }
+      ]
+    },
+    "lagrange_interpolate_at_zero": {
+      "points": [
+        [
+          1,
+          "1111111665"
+        ],
+        [
+          2,
+          "2098767651"
+        ],
+        [
+          3,
+          "3086424747"
+        ]
+      ],
+      "secret_decimal": "123456789"
+    }
+  },
+  "aad": {
+    "state_json": {
+      "version": 1,
+      "fields": [
+        {
+          "x": 1,
+          "salt": "ABEiM0RVZneImaq7zN3u/w==",
+          "helper": "",
+          "c": "42"
+        },
+        {
+          "x": 2,
+          "salt": "/+7dzLuqmYh3ZlVEMyIRAA==",
+          "helper": "aGk=",
+          "c": "115792089237316195423570985008687907853269984665640564039457584007913129639746"
+        }
+      ],
+      "threshold": 2,
+      "kdf_salt": "CgsMDQ4PEBESExQVFhcYGQ==",
+      "kdf_context": "dGVzc2VyYS9rZWsvdjE=",
+      "argon2": {
+        "opslimit": 3,
+        "memlimit": 268435456,
+        "hash_len": 64
+      },
+      "nonce": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYX",
+      "ct": "",
+      "tag": ""
+    },
+    "aad_hex": "00000001ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff430000000200000002000000010000001000112233445566778899aabbccddeeff00000000000000000000000000000000000000000000000000000000000000000000002a0000000200000010ffeeddccbbaa99887766554433221100000000026869ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff42000000100a0b0c0d0e0f101112131415161718190000000e746573736572612f6b656b2f7631000000000000000300000000100000000000004000000018000102030405060708090a0b0c0d0e0f1011121314151617"
+  },
+  "secretstream_decrypt": {
+    "key_hex": "0707070707070707070707070707070707070707070707070707070707070707",
+    "header_hex": "193646a35050b939a648dae460b2a71b6dfac7cb54ce644d",
+    "chunks": [
+      {
+        "ad_hex": "6864722d6164",
+        "tag": "MESSAGE",
+        "plaintext_hex": "6669727374206368756e6b",
+        "ciphertext_hex": "68e3dd19fb7454645655c57a8ccdda4c16026c8092243e777c92efea"
+      },
+      {
+        "ad_hex": "",
+        "tag": "MESSAGE",
+        "plaintext_hex": "7365636f6e64206368756e6b",
+        "ciphertext_hex": "5eebd8b307455d19d729c7a6d51f722e7463559b667e5e13d6c0f26fc3"
+      },
+      {
+        "ad_hex": "",
+        "tag": "FINAL",
+        "plaintext_hex": "66696e616c206368756e6b",
+        "ciphertext_hex": "63a25f5e693f9339e8ad1f0dbfd0c192e07e2d558bd2adac55ca310d"
+      }
+    ]
+  },
+  "string_normalization": [
+    {
+      "input_utf8_hex": "202048656c6c6f20576f726c642020",
+      "normalized_utf8_hex": "68656c6c6f20776f726c64"
+    },
+    {
+      "input_utf8_hex": "53747261c39f65",
+      "normalized_utf8_hex": "73747261737365"
+    },
+    {
+      "input_utf8_hex": "436166c3a9",
+      "normalized_utf8_hex": "636166c3a9"
+    },
+    {
+      "input_utf8_hex": "43616665cc81",
+      "normalized_utf8_hex": "636166c3a9"
+    },
+    {
+      "input_utf8_hex": "cea3ce8acea3cea5cea6ce9fcea3",
+      "normalized_utf8_hex": "cf83ceafcf83cf85cf86cebfcf83"
+    },
+    {
+      "input_utf8_hex": "c4b07374616e62756c",
+      "normalized_utf8_hex": "69cc877374616e62756c"
+    },
+    {
+      "input_utf8_hex": "efac817265",
+      "normalized_utf8_hex": "66697265"
+    },
+    {
+      "input_utf8_hex": "c2a0706164646564c2a0",
+      "normalized_utf8_hex": "706164646564"
+    },
+    {
+      "input_utf8_hex": "c785756e676c61",
+      "normalized_utf8_hex": "c786756e676c61"
+    }
+  ],
+  "vault_unlock": {
+    "processor": "ExactStringProcessor",
+    "answers": [
+      "alpha",
+      "bravo",
+      "charlie"
+    ],
+    "threshold": 2,
+    "state_json": {
+      "version": 1,
+      "fields": [
+        {
+          "x": 1,
+          "salt": "F/GFurO2+naoKmW8ToNiwQ==",
+          "helper": "",
+          "c": "50449073666181519465173105058131227891469071141823256815509019394467026935651"
+        },
+        {
+          "x": 2,
+          "salt": "fqm8NGjRuVbjprP/5OYm+w==",
+          "helper": "",
+          "c": "2064848731884862513146852336199072487983676079761008581904234584445008428692"
+        },
+        {
+          "x": 3,
+          "salt": "iBDJHR0R/3yxN6rcEWsGXA==",
+          "helper": "",
+          "c": "55917044937180361330600529312340615176724394351654528939829183356939368812108"
+        }
+      ],
+      "threshold": 2,
+      "kdf_salt": "4I8H08xjoCzByDExmIr5Og==",
+      "kdf_context": "dGVzc2VyYS9rZWsvdjE=",
+      "argon2": {
+        "opslimit": 2,
+        "memlimit": 8388608,
+        "hash_len": 64
+      },
+      "nonce": "qZMfb0rwMQ9qsAykdG+zWPdJGE3fjrc3",
+      "ct": "UPb4tMyNqwvOcdp7Z3KGOO87c9wWXbAvMbbOhe+vVyI=",
+      "tag": "mfHBCr4RZeyTwE5s7hw08w=="
+    },
+    "mek_hex": "00112233445566778899aabbccddeeff00112233445566778899aabbccddeeff",
+    "note": "Unlock with any 2 of the 3 answers correct must yield mek_hex."
+  },
+  "vault_unlock_single_field": {
+    "processor": "ExactStringProcessor",
+    "answers": [
+      "correct horse battery staple"
+    ],
+    "threshold": 1,
+    "state_json": {
+      "version": 1,
+      "fields": [
+        {
+          "x": 1,
+          "salt": "08B8yTdwMD68ZrhcLjSvow==",
+          "helper": "",
+          "c": "94758581754096255881712185851828957891415341955684260272564691518466110881017"
+        }
+      ],
+      "threshold": 1,
+      "kdf_salt": "4er3uFssDfmONKYKEbxzzg==",
+      "kdf_context": "dGVzc2VyYS9rZWsvdjE=",
+      "argon2": {
+        "opslimit": 2,
+        "memlimit": 8388608,
+        "hash_len": 64
+      },
+      "nonce": "LPNyXpUJ7PNBC+2WG+LIytb6vQGfyJNH",
+      "ct": "wqpiK0k2afu98JOjWoCZ6Dj5Hwr2cWsWl7ToW5i9ewo=",
+      "tag": "9MCNX1R+CGBrBq1/fkJvzw=="
+    },
+    "mek_hex": "ffeeddccbbaa99887766554433221100ffeeddccbbaa99887766554433221100",
+    "note": "M=1/t=1 degenerate case: a plain password vault. The correct password must yield mek_hex; any wrong password must fail."
+  },
+  "vault_unlock_unicode": {
+    "processor": "ExactStringProcessor",
+    "answers": [
+      "Caf\u00e9",
+      "Stra\u00dfe"
+    ],
+    "alt_answers": [
+      "Cafe\u0301",
+      "STRASSE"
+    ],
+    "threshold": 2,
+    "state_json": {
+      "version": 1,
+      "fields": [
+        {
+          "x": 1,
+          "salt": "iTxI3yGxyU5bW5s00e/efw==",
+          "helper": "",
+          "c": "86608131924297442194472603015692767850579863897077165266976691623226918017231"
+        },
+        {
+          "x": 2,
+          "salt": "2FpxbwDA9+oeT81ZhwMECw==",
+          "helper": "",
+          "c": "24109200484062316666160044879792698945199249644142628926180094487308395624160"
+        }
+      ],
+      "threshold": 2,
+      "kdf_salt": "StSVfoWf8esgZD+QEp2tDQ==",
+      "kdf_context": "dGVzc2VyYS9rZWsvdjE=",
+      "argon2": {
+        "opslimit": 2,
+        "memlimit": 8388608,
+        "hash_len": 64
+      },
+      "nonce": "YyjHWRzdjRwJKLwBNPNdQVXtHEgi9yEw",
+      "ct": "UQWonNbQOPCmK9O8b7mIg1edWdooDgB5FkDB3lYCCTk=",
+      "tag": "GS0S9LmmrHuZDl01Nzxz6Q=="
+    },
+    "mek_hex": "a1b2c3d4e5f6a7b8a1b2c3d4e5f6a7b8a1b2c3d4e5f6a7b8a1b2c3d4e5f6a7b8",
+    "note": "Both answers and alt_answers must unlock to mek_hex: decomposed e+combining-acute == precomposed \u00e9 (NFC), and STRASSE == Stra\u00dfe (casefold \u00df->ss)."
+  }
+}
